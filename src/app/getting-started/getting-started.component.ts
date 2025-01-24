@@ -3,11 +3,11 @@ import {Title} from '@angular/platform-browser';
 
 
 @Component({
-  selector: 'app-getting-started',
-  templateUrl: './getting-started.component.html',
-  styleUrls: ['./getting-started.component.scss'],
-
-  encapsulation: ViewEncapsulation.None,
+    selector: 'app-getting-started',
+    templateUrl: './getting-started.component.html',
+    styleUrls: ['./getting-started.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class GettingStartedComponent implements OnInit {
 

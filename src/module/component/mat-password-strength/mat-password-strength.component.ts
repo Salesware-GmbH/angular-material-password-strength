@@ -8,11 +8,12 @@ import {RegExpValidator} from '../../validator/regexp.class';
 
 
 @Component({
-  selector: 'mat-password-strength',
-  exportAs: 'matPasswordStrength',
-  templateUrl: './mat-password-strength.component.html',
-  styleUrls: ['./mat-password-strength.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'mat-password-strength',
+    exportAs: 'matPasswordStrength',
+    templateUrl: './mat-password-strength.component.html',
+    styleUrls: ['./mat-password-strength.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class MatPasswordStrengthComponent implements OnInit, OnChanges {
 
