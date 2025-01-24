@@ -1,7 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {Title} from '@angular/platform-browser';
-import {MatLegacySlideToggleChange as MatSlideToggleChange} from '@angular/material/legacy-slide-toggle';
-import {MatLegacySnackBar as MatSnackBar} from '@angular/material/legacy-snack-bar';
 
 
 @Component({
@@ -166,22 +164,21 @@ export class GettingStartedComponent implements OnInit {
   inputType = 'password';
   showDetails: boolean;
 
-  constructor(private titleService: Title,
-              public snackBar: MatSnackBar) {
+  constructor(private titleService: Title) {
   }
 
   ngOnInit() {
     this.titleService.setTitle('Getting Started | mat-password-strength');
   }
 
-  onSlideToggleChange(event: MatSlideToggleChange) {
+  onSlideToggleChange(event) {
     event.checked ? this.inputType = 'text' : this.inputType = 'password';
   }
 
   showCopyMessage(content: string) {
-    this.snackBar.open(`${content} copied`, 'OK', {
-      duration: 3000
-    });
+    // this.snackBar.open(`${content} copied`, 'OK', {
+    //   duration: 3000
+    // });
   }
 
 }
