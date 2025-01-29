@@ -1,11 +1,11 @@
 import {Component} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
-import {MatLegacyRadioChange as MatRadioChange} from '@angular/material/legacy-radio';
 
 @Component({
-  selector: 'app-info-comp-example',
-  templateUrl: './info-comp-example.component.html',
-  styleUrls: ['./info-comp-example.component.scss']
+    selector: 'app-info-comp-example',
+    templateUrl: './info-comp-example.component.html',
+    styleUrls: ['./info-comp-example.component.scss'],
+    standalone: false
 })
 export class InfoCompExampleComponent {
 
@@ -16,7 +16,7 @@ export class InfoCompExampleComponent {
     this.lang = this.translate.currentLang ? this.translate.currentLang : this.translate.getDefaultLang();
   }
 
-  changeLanguage(event: MatRadioChange) {
+  changeLanguage(event) {
     this.translate.use(event.value);
   }
 

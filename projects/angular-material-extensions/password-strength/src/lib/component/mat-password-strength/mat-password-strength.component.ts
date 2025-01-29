@@ -18,18 +18,19 @@ import {ThemePalette} from '@angular/material/core';
 
 
 @Component({
-  selector: 'mat-password-strength',
-  exportAs: 'matPasswordStrength',
-  templateUrl: './mat-password-strength.component.html',
-  styleUrls: ['./mat-password-strength.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => MatPasswordStrengthComponent),
-      multi: true
-    }
-  ]
+    selector: 'mat-password-strength',
+    exportAs: 'matPasswordStrength',
+    templateUrl: './mat-password-strength.component.html',
+    styleUrls: ['./mat-password-strength.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => MatPasswordStrengthComponent),
+            multi: true
+        }
+    ],
+    standalone: false
 })
 export class MatPasswordStrengthComponent implements OnInit, OnChanges, AfterContentChecked, ControlValueAccessor {
 

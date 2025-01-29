@@ -3,10 +3,11 @@ import {Component, Input, ViewEncapsulation} from '@angular/core';
 type Type = 'text' | 'password' ;
 
 @Component({
-  selector: 'mat-pass-toggle-visibility',
-  templateUrl: './mat-pass-toggle-visibility.component.html',
-  styleUrls: ['./mat-pass-toggle-visibility.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'mat-pass-toggle-visibility',
+    templateUrl: './mat-pass-toggle-visibility.component.html',
+    styleUrls: ['./mat-pass-toggle-visibility.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class MatPassToggleVisibilityComponent {
 

@@ -10,7 +10,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatPasswordStrengthModule} from '@angular-material-extensions/password-strength';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MarkdownModule} from 'ngx-markdown';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {InitExampleComponent} from './init-example/init-example.component';
@@ -24,38 +24,31 @@ export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    InitExampleComponent
-  ],
-  imports: [
-    BrowserModule.withServerTransition({appId: 'serverApp'}),
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    MarkdownModule.forRoot({loader: HttpClient}),
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: (createTranslateLoader),
-        deps: [HttpClient]
-      }
-    }),
-    MatPasswordStrengthModule,
-    FormsModule,
-    ReactiveFormsModule,
-    FlexLayoutModule,
-    MatToolbarModule,
-    MatTabsModule,
-    MatIconModule,
-    MatCardModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSlideToggleModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        InitExampleComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }),
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MarkdownModule.forRoot({ loader: HttpClient }),
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: (createTranslateLoader),
+                deps: [HttpClient]
+            }
+        }),
+        MatPasswordStrengthModule,
+        FormsModule,
+        ReactiveFormsModule,
+        FlexLayoutModule,
+        MatToolbarModule,
+        MatTabsModule,
+        MatIconModule,
+        MatCardModule,
+        MatInputModule,
+        MatButtonModule,
+        MatSlideToggleModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {
 }

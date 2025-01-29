@@ -1,146 +1,25 @@
 {
-  "name": "@angular-material-extensions/password-strength",
-  "description": "Material password strength meter to indicate how secure is the provided password",
-  "version": "16.0.0",
-  "homepage": "https://github.com/angular-material-extensions/password-strength",
-  "author": {
-    "name": "anthonynahas",
-    "url": "https://github.com/anthonynahas"
-  },
+  "name": "@4sellers/angular-material-password-strength",
+  "version": "19.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/angular-material-extensions/password-strength.git"
+    "url": "https://github.com/4sellers/angular-material-password-strength"
   },
+  "author": "4Sellers",
   "license": "MIT",
   "schematics": "./schematics/collection.json",
-  "keywords": [
-    "ngx",
-    "library",
-    " angular",
-    " material",
-    " password",
-    " confirm password",
-    " password validation",
-    " password-strength",
-    " password-strength info",
-    " strength-meter"
-  ],
-  "bugs": {
-    "url": "https://github.com/angular-material-extensions/password-strength/issues"
-  },
   "scripts": {
-    "build": "ng build @angular-material-extensions/password-strength --configuration=production",
-    "build:watch": "../../../node_modules/.bin/ng build @angular-material-extensions/password-strength --watch",
-    "build:schematics": "../../../node_modules/.bin/tsc -p tsconfig.schematics.json",
-    "clean": "rm -rf ../../../dist",
-    "lint": "../../../node_modules/.bin/ng lint @angular-material-extensions/password-strength",
-    "resync:schematics": "rsync -a schematics/collection.json ../../../dist/angular-material-extensions/password-strength/schematics/",
-    "resync:readme": "rsync -a ../../../README.md ../../../dist/angular-material-extensions/password-strength/",
-    "postbuild": "npm run build:schematics && npm run resync:readme && npm run resync:schematics",
-    "prepublish": "npm run build",
-    "release:patch": "../../../node_modules/.bin/release-it --patch --ci",
-    "release:minor": "../../../node_modules/.bin/release-it --minor --ci",
-    "release:major": "../../../node_modules/.bin/release-it --major --ci --no-git.requireCleanWorkingDir --dry-run",
-    "release:custom": "../../../node_modules/.bin/release-it 16.0.0 --ci --no-git.requireCleanWorkingDir",
-    "ng:test": "../../../node_modules/.bin/ng test @angular-material-extensions/password-strength",
-    "test": "../../../node_modules/.bin/jest --coverage",
-    "test:watch": "../../../node_modules/.bin/jest --coverage --watch"
+    "build": "ng build @angular-material-extensions/password-strength --configuration production"
   },
   "peerDependencies": {
-    "@angular/common": "^16.x",
-    "@angular/core": "^16.x",
-    "@angular/forms": "^16.x",
-    "@angular/cdk": "^16.x",
-    "@angular/material": "^16.x"
+    "@angular/common": "^19.1.3",
+    "@angular/core": "^19.1.3",
+    "@angular/forms": "^19.1.3",
+    "@angular/cdk": "^19.1.1",
+    "@angular/material": "^19.1.1"
   },
   "engines": {
     "node": ">=14"
-  },
-  "release-it": {
-    "github": {
-      "release": true
-    },
-    "npm": {
-      "publish": true,
-      "publishPath": "../../../dist/angular-material-extensions/password-strength"
-    },
-    "publishConfig": {
-      "access": "public"
-    },
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": "angular",
-        "infile": "../../../CHANGELOG.md"
-      }
-    },
-    "hooks": {
-      "before:init": [
-        "npm run clean"
-      ],
-      "after:bump": "echo \"building lib v${version}... \" && npm run build",
-      "before:git:release": "echo \"Updating CHANGELOG.md for v${version} \" && git commit -m \"Updating CHANGELOG.md for v${version} \" ../../../CHANGELOG.md",
-      "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}.",
-      "before:npm": "echo building the library..."
-    }
-  },
-  "jest": {
-    "preset": "jest-preset-angular",
-    "roots": [
-      "<rootDir>/src/"
-    ],
-    "coverageReporters": [
-      "lcov",
-      "text"
-    ],
-    "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "/config",
-      "/dist/"
-    ],
-    "setupTestFrameworkScriptFile": "<rootDir>/config/setupJest.ts"
-  },
-  "greenkeeper": {
-    "ignore": [
-      "@angular/core",
-      "@angular/common",
-      "@angular/compiler",
-      "@angular/cdk",
-      "@angular/material",
-      "@angular/platform-server",
-      "@angular/platform-browser",
-      "@angular/platform-browser-dynamic",
-      "@angular/compiler-cli",
-      "webpack",
-      "zone.js",
-      "rxjs",
-      "tslint",
-      "gulp-tslint",
-      "typescript",
-      "awesome-typescript-loader",
-      "codelyzer",
-      "@angular/animations",
-      "@types/jasmine",
-      "@types/jest",
-      "@types/node",
-      "conventional-github-releaser",
-      "rollup-plugin-uglify"
-    ]
-  },
-  "commitplease": {
-    "style": "angular",
-    "types": [
-      "feat",
-      "fix",
-      "docs",
-      "style",
-      "refactor",
-      "perf",
-      "test",
-      "chore",
-      "revert",
-      "demo"
-    ],
-    "scope": "\\S+.*"
   },
   "dependencies": {
     "tslib": "^2.4.1"

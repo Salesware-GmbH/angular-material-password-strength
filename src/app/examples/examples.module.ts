@@ -5,7 +5,7 @@ import {ExamplesRoutingModule} from './examples-routing.module';
 import {MarkdownModule} from 'ngx-markdown';
 import {InfoCompExampleComponent} from './info-comp-example/info-comp-example.component';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import {createTranslateLoader} from '../app.module';
 import {MatPasswordStrengthModule} from '@angular-material-extensions/password-strength';
 import {FormsModule} from '@angular/forms';
