@@ -1,11 +1,11 @@
 {
-  "name": "@4sellers/angular-material-password-strength",
+  "name": "@salesware/angular-material-password-strength",
   "version": "19.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/4sellers/angular-material-password-strength"
+    "url": "https://github.com/Salesware-GmbH/angular-material-password-strength"
   },
-  "author": "4Sellers",
+  "author": "Salesware",
   "license": "MIT",
   "schematics": "./schematics/collection.json",
   "scripts": {
