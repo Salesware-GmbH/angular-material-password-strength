@@ -2,7 +2,8 @@
   "name": "password-strength",
   "version": "0.0.0",
   "scripts": {
-    "build:lib": "ng build @angular-material-extensions/password-strength --configuration production"
+    "build": "ng build @angular-material-extensions/password-strength --configuration production",
+    "publish": "npm publish --access=public dist/angular-material-extensions/password-strength/"
   },
   "dependencies": {
     "@angular-material-extensions/pages": "^4.0.0",
