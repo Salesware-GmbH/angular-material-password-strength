@@ -6,13 +6,11 @@
     "publish": "npm publish --access=public dist/angular-material-extensions/password-strength/"
   },
   "dependencies": {
-    "@angular-material-extensions/pages": "^4.0.0",
     "@angular/animations": "^19.1.3",
     "@angular/cdk": "^19.1.1",
     "@angular/common": "^19.1.3",
     "@angular/compiler": "^19.1.3",
     "@angular/core": "^19.1.3",
-    "@angular/flex-layout": "^13.0.0-beta.36",
     "@angular/forms": "^19.1.3",
     "@angular/material": "^19.1.1",
     "@angular/platform-browser": "^19.1.3",
@@ -25,14 +23,12 @@
     "express": "^4.18.1",
     "ngx-clipboard": "^15.1.0",
     "ngx-highlightjs": "^7.0.0",
-    "ngx-markdown": "^14.0.1",
     "rxjs": "^7.5.5",
     "tslib": "^2.3.1",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.1.4",
-    "@angular-devkit/build-ng-packagr": "^0.1000.8",
     "@angular/cli": "^19.1.4",
     "@angular/compiler-cli": "^19.1.3",
     "@angular/language-service": "^19.1.3",
@@ -52,7 +48,6 @@
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~3.3.0",
-    "karma-jasmine-html-reporter": "^1.5.0",
     "ng-packagr": "^19.1.0",
     "protractor": "~7.0.0",
     "release-it": "^16.2.1",
