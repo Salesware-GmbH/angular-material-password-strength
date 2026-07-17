@@ -1,6 +1,6 @@
 {
   "name": "@salesware/angular-material-password-strength",
-  "version": "21.0.0",
+  "version": "22.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -8,11 +8,11 @@
   },
   "schematics": "./schematics/collection.json",
   "peerDependencies": {
-    "@angular/common": "^21.1.2",
-    "@angular/core": "^21.1.2",
-    "@angular/forms": "^21.1.2",
-    "@angular/cdk": "^21.1.2",
-    "@angular/material": "^21.1.2"
+    "@angular/common": "^22.0.0",
+    "@angular/core": "^22.0.0",
+    "@angular/forms": "^22.0.0",
+    "@angular/cdk": "^22.0.0",
+    "@angular/material": "^22.0.0"
   },
   "engines": {
     "node": ">=14"
