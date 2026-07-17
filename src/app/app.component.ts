@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild, ChangeDetectionStrategy} from '@angular/core';
 import {MatPasswordStrengthComponent} from '@angular-material-extensions/password-strength';
 import {UntypedFormControl, UntypedFormGroup} from '@angular/forms';
 
@@ -6,6 +6,7 @@ import {UntypedFormControl, UntypedFormGroup} from '@angular/forms';
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class AppComponent implements OnInit {

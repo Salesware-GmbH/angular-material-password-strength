@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {MatPasswordStrengthComponent} from '../mat-password-strength/mat-password-strength.component';
 import {animate, animateChild, keyframes, query, stagger, style, transition, trigger, useAnimation} from '@angular/animations';
 import {shake} from '../../animations/index';
@@ -60,6 +60,7 @@ import {shake} from '../../animations/index';
             transition(':enter', useAnimation(shake)),
         ]),
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class MatPasswordStrengthInfoComponent implements OnInit {

@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 
 
@@ -7,6 +7,7 @@ import {Title} from '@angular/platform-browser';
     templateUrl: './getting-started.component.html',
     styleUrls: ['./getting-started.component.scss'],
     encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class GettingStartedComponent implements OnInit {
