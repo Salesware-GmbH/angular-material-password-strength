@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, ChangeDetectionStrategy} from '@angular/core';
+import {Component, Input, OnInit, ChangeDetectionStrategy, TemplateRef} from '@angular/core';
 import {MatPasswordStrengthComponent} from '../mat-password-strength/mat-password-strength.component';
 import {animate, animateChild, keyframes, query, stagger, style, transition, trigger, useAnimation} from '@angular/animations';
 import {shake} from '../../animations/index';
@@ -94,6 +94,12 @@ export class MatPasswordStrengthInfoComponent implements OnInit {
 
   @Input()
   matIconError = 'error';
+
+  @Input()
+  iconDoneTemplate: TemplateRef<unknown>;
+
+  @Input()
+  iconErrorTemplate: TemplateRef<unknown>;
 
   ngOnInit(): void {
     if (!this.minCharsCriteriaMsg) {
