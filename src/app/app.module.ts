@@ -3,7 +3,6 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
@@ -30,7 +29,6 @@ export function createTranslateLoader(http: HttpClient) {
     ],
     bootstrap: [AppComponent], imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }),
         AppRoutingModule,
-        BrowserAnimationsModule,
         MarkdownModule.forRoot({ loader: HttpClient }),
         TranslateModule.forRoot({
             loader: {

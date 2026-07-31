@@ -187,46 +187,6 @@
               </video>
             }
           </div>
-          <div class="comment-container">
-            <p>
-              Furthermore, <a href="https://www.npmjs.com/package/@angular/animations"
-              mat-button
-              color="primary">
-              angular animations
-            </a> is required too to provide advanced transitions between the components.
-          </p>
-        </div>
-        <div fxLayout="row" fxLayoutAlign="space-between">
-          <pre><code [highlight]="'$ npm i -s @angular/animations'"></code></pre>
-          <button mat-icon-button
-            ngxClipboard
-            [cbContent]="'npm i -s @angular/animations'"
-            matTooltip="copy"
-            (click)="showCopyMessage('npm i -s @angular/animations')">
-            <mat-icon aria-label="copy content" class="mat-18">content_copy</mat-icon>
-          </button>
-        </div>
-        <div fxLayoutAlign="center">
-          @if (true) {
-            <video controls autoplay loop>
-              <source
-                src="assets/tutorials/npm_i_animations.mp4"
-                type="video/mp4">
-              </video>
-            }
-          </div>
-          <div class="comment-container">
-            <p>Now it's time to import the animations module.</p>
-          </div>
-          <mat-card>
-            <mat-card-content>
-              <pre><code [highlight]="importBrowserAnimationsModule"></code></pre>
-            </mat-card-content>
-          </mat-card>
-          <mat-card-footer fxLayoutAlign="center">
-            <a href="https://material.angular.io/guide/getting-started#step-2-animations"
-            mat-button color="primary">Learn more</a>
-          </mat-card-footer>
         </mat-page-content>
       </mat-page-loader>
 
