@@ -28,7 +28,6 @@ export function addPackageJsonDependencies(): Rule {
         version: loadPackageVersionGracefully(context) || 'latest',
         name: '@angular-material-extensions/password-strength'
       },
-      {type: NodeDependencyType.Default, version: ngCoreVersionTag || '^9.0.0', name: '@angular/animations'},
       {type: NodeDependencyType.Default, version: ngCoreVersionTag || '^9.0.0', name: '@angular/forms'}
     ];
 

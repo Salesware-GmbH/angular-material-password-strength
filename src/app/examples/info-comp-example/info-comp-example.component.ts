@@ -1,10 +1,11 @@
-import {Component} from '@angular/core';
+import {Component, ChangeDetectionStrategy} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 
 @Component({
     selector: 'app-info-comp-example',
     templateUrl: './info-comp-example.component.html',
     styleUrls: ['./info-comp-example.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class InfoCompExampleComponent {
