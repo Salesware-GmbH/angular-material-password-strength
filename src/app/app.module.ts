@@ -3,14 +3,13 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatPasswordStrengthModule} from '@angular-material-extensions/password-strength';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MarkdownModule} from 'ngx-markdown';
-import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi, withXhr } from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {InitExampleComponent} from './init-example/init-example.component';
@@ -30,7 +29,6 @@ export function createTranslateLoader(http: HttpClient) {
     ],
     bootstrap: [AppComponent], imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }),
         AppRoutingModule,
-        BrowserAnimationsModule,
         MarkdownModule.forRoot({ loader: HttpClient }),
         TranslateModule.forRoot({
             loader: {
@@ -49,6 +47,6 @@ export function createTranslateLoader(http: HttpClient) {
         MatCardModule,
         MatInputModule,
         MatButtonModule,
-        MatSlideToggleModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        MatSlideToggleModule], providers: [provideHttpClient(withXhr(), withInterceptorsFromDi())] })
 export class AppModule {
 }

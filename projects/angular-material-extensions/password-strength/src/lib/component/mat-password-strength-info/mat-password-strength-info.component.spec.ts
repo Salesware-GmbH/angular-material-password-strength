@@ -3,7 +3,6 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import {MatPasswordStrengthInfoComponent} from './mat-password-strength-info.component';
 import {MatCardModule, MatIconModule} from '@angular/material';
 import {MatPasswordStrengthComponent} from '../mat-password-strength/mat-password-strength.component';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {By} from '@angular/platform-browser';
 
 describe('NgxMaterialPasswordStrengthInfoComponent', () => {
@@ -22,7 +21,7 @@ describe('NgxMaterialPasswordStrengthInfoComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [NoopAnimationsModule, MatCardModule, MatIconModule],
+      imports: [MatCardModule, MatIconModule],
       declarations: [MatPasswordStrengthInfoComponent]
     }).compileComponents();
   }));

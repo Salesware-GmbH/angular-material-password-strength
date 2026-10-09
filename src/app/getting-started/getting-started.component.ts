@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 
 
@@ -7,6 +7,7 @@ import {Title} from '@angular/platform-browser';
     templateUrl: './getting-started.component.html',
     styleUrls: ['./getting-started.component.scss'],
     encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class GettingStartedComponent implements OnInit {
@@ -61,25 +62,7 @@ export class GettingStartedComponent implements OnInit {
               OS: darwin x64
               Angular:`;
 
-  importBrowserAnimationsModule = `import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
-                                    @NgModule({
-                                      ...
-                                      imports: [BrowserAnimationsModule],
-                                      ...
-                                    })
-                                    export class YourAppModule { }`;
-
-  importNoopAnimationsModule = `import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-
-                                    @NgModule({
-                                      ...
-                                      imports: [NoopAnimationsModule],
-                                      ...
-                                    })
-                                    export class YourAppModule { }`;
-
-  importMaterialThemeSCSS = `@import "~@angular/material/prebuilt-themes/indigo-pink.css";`;
+  importMaterialThemeSCSS =`@import "~@angular/material/prebuilt-themes/indigo-pink.css";`;
 
   customMaterialTheme =
     `@import '../node_modules/@angular/material/theming';
@@ -123,12 +106,10 @@ export class GettingStartedComponent implements OnInit {
   importMatPasswordStrengthModule = `import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';`;
 
   importMatPasswordStrengthModuleInAppModule = `import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
-                                              import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
                                               @NgModule({
                                                 declarations: [AppComponent, ...],
                                                 imports: [MatPasswordStrengthModule.forRoot(),
-                                                BrowserAnimationsModule,
                                                  ...],
                                                 bootstrap: [AppComponent]
                                               })
